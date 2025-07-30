@@ -7,8 +7,9 @@ CUR_PATH := vendor/rockchip/common
 PRODUCT_COPY_FILES += \
     $(CUR_PATH)/phone/etc/ppp/ip-down:system/etc/ppp/ip-down \
     $(CUR_PATH)/phone/etc/ppp/ip-up:system/etc/ppp/ip-up \
-    $(CUR_PATH)/phone/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
-    $(CUR_PATH)/phone/etc/operator_table:system/etc/operator_table
+    $(CUR_PATH)/phone/bin/chat:system/bin/chat \
+    $(CUR_PATH)/phone/lib/libreference-ril-sim7600gh.so:vendor/lib64/libreference-ril-sim7600gh.so \
+    $(CUR_PATH)/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 ifeq ($(strip $(PRODUCT_MODEM)), DTS4108C)
 PRODUCT_COPY_FILES += \
